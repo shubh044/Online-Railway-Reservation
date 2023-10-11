@@ -1,0 +1,38 @@
+package com.rrs.TrainBookingservice;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.rrs.TrainBookingservice.controllers.Bookingcontroller;
+import com.rrs.TrainBookingservice.models.Booking;
+import com.rrs.TrainBookingservice.repository.BookingDetailsRepo;
+import com.rrs.TrainBookingservice.repository.BookingInfoRepo;
+import com.rrs.TrainBookingservice.repository.BookingRepo;
+
+@SpringBootTest
+class TrainBookingServiceApplicationTests {
+
+	 BookingRepo bookingRepo = mock(BookingRepo.class);
+     BookingDetailsRepo bookingDetailsRepo = mock(BookingDetailsRepo.class);
+     BookingInfoRepo bookingInfoRepo = mock(BookingInfoRepo.class);
+     Bookingcontroller bookingController = new Bookingcontroller();
+	
+	@Test
+	void contextLoads() {
+	}
+	
+	@Test
+    public void testGetBookedTicket() {
+        Optional<BookingInfo> booking =  
+    }
+}
+

@@ -1,0 +1,17 @@
+
+server.port=8082
+eureka.client.service-url.default-zone=http://localhost:8761/eureka
+
+eureka.instance.prefer-ip-address=true
+eureka.instance.hostname=localhost
+
+#secret key - should be encrypted
+jwt.secret=secretkey
+#ignore null fields in json
+spring.jackson.default-property-inclusion=NON_NULL
+
+
+spring.cloud.gateway.globalcors.cors-configurations.["/**].allowed-origins=http://localhost:8081/
+spring.cloud.gateway.globalcors.cors-configurations.["/**].allowed-headers=*
+spring.cloud.gateway.globalcors.cors-configurations.["/**].allowed-methods=POST
+

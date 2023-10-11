@@ -1,0 +1,69 @@
+package com.rrs.TrainBookingservice;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.rrs.TrainBookingservice.controllers.Bookingcontroller;
+import com.rrs.TrainBookingservice.models.Booking;
+import com.rrs.TrainBookingservice.repository.BookingDetailsRepo;
+import com.rrs.TrainBookingservice.repository.BookingInfoRepo;
+import com.rrs.TrainBookingservice.repository.BookingRepo;
+
+@SpringBootTest
+class TrainBookingServiceApplicationTests {
+
+	 BookingRepo bookingRepo = mock(BookingRepo.class);
+     BookingDetailsRepo bookingDetailsRepo = mock(BookingDetailsRepo.class);
+     BookingInfoRepo bookingInfoRepo = mock(BookingInfoRepo.class);
+     Bookingcontroller bookingController = new Bookingcontroller();
+	
+	@Test
+	void contextLoads() {
+	}
+	
+	
+	@Test
+	public void testSaveBooking() {
+	    Booking booking = new Booking();
+	    // Set up your booking object here
+	
+	    String result = bookingController.saveBooking(booking);
+	
+	    // Verify that the booking is saved in the database
+	    List<Booking> savedBookings = bookingRepo.findAll();
+	    assertEquals(1, savedBookings.size());
+	    assertEquals("Added booking details", result);
+	}
+	
+	@Test
+    public void testGetByUserId() {
+        String userId = "user123";
+
+        Booking booking1 = new Booking();
+        // Set up your booking objects here and associate them with the user
+
+        Booking booking2 = new Booking();
+        // Set up another booking object associated with the same user
+
+        // Save the bookings in the database
+        bookingRepo.save(booking1);
+        bookingRepo.save(booking2);
+
+        List<Booking> result = bookingController.getByUserId(userId);
+
+        // You can assert the result to verify that the correct bookings are returned for the user.
+        assertEquals(2, result.size());
+    }
+}
+
+	
