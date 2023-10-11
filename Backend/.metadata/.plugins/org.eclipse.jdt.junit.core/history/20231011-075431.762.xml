@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TSServiceTests" project="Train-service-MDB-1" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.micros.trains.TrainServiceMdb1ServiceTests" time="0.725" displayname="TrainServiceMdb1ServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.TrainServiceMdb1ServiceTests]">
+    <testcase name="checkStations" classname="com.micros.trains.TrainServiceMdb1ServiceTests" time="0.692" displayname="checkStations()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.TrainServiceMdb1ServiceTests]/[method:checkStations()]"/>
+    <testcase name="checkNotThere" classname="com.micros.trains.TrainServiceMdb1ServiceTests" time="0.013" displayname="checkNotThere()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.TrainServiceMdb1ServiceTests]/[method:checkNotThere()]"/>
+    <testcase name="contextLoads" classname="com.micros.trains.TrainServiceMdb1ServiceTests" time="0.008" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.TrainServiceMdb1ServiceTests]/[method:contextLoads()]"/>
+    <testcase name="checkbyTrainName" classname="com.micros.trains.TrainServiceMdb1ServiceTests" time="0.009" displayname="checkbyTrainName()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.TrainServiceMdb1ServiceTests]/[method:checkbyTrainName()]"/>
+  </testsuite>
+</testrun>

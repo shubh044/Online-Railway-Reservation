@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="New_configuration" project="Train-service-MDB-1" tests="2" started="2" failures="1" errors="0" ignored="0">
+  <testsuite name="com.micros.trains.repotests.TrainServiceMdb1ServiceTests" time="0.743" displayname="TrainServiceMdb1ServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.repotests.TrainServiceMdb1ServiceTests]">
+    <testcase name="testFindTrainByName" classname="com.micros.trains.repotests.TrainServiceMdb1ServiceTests" time="0.724" displayname="testFindTrainByName()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.repotests.TrainServiceMdb1ServiceTests]/[method:testFindTrainByName()]"/>
+    <testcase name="testFindTrainsBetweenStations" classname="com.micros.trains.repotests.TrainServiceMdb1ServiceTests" time="0.018" displayname="testFindTrainsBetweenStations()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.repotests.TrainServiceMdb1ServiceTests]/[method:testFindTrainsBetweenStations()]">
+      <failure>
+        <expected>1</expected>
+        <actual>0</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;0&gt;&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&#13;
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)&#13;
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:527)&#13;
+	at com.micros.trains.repotests.TrainServiceMdb1ServiceTests.testFindTrainsBetweenStations(TrainServiceMdb1RepoTests.java:28)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+  </testsuite>
+</testrun>

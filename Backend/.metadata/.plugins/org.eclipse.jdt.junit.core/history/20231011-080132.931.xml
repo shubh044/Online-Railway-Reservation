@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TSRepoTests" project="Train-service-MDB-1" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.micros.trains.repotests.TrainServiceMdb1ServiceTests" time="0.681" displayname="TrainServiceMdb1ServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.repotests.TrainServiceMdb1ServiceTests]">
+    <testcase name="testFindTrainByName" classname="com.micros.trains.repotests.TrainServiceMdb1ServiceTests" time="0.668" displayname="testFindTrainByName()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.repotests.TrainServiceMdb1ServiceTests]/[method:testFindTrainByName()]"/>
+    <testcase name="testFindTrainsBetweenStations" classname="com.micros.trains.repotests.TrainServiceMdb1ServiceTests" time="0.011" displayname="testFindTrainsBetweenStations()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.repotests.TrainServiceMdb1ServiceTests]/[method:testFindTrainsBetweenStations()]"/>
+  </testsuite>
+</testrun>

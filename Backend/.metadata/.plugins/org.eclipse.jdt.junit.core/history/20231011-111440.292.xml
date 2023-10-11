@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TSControllerTests" project="Train-service-MDB-1" tests="6" started="6" failures="0" errors="2" ignored="0">
+  <testsuite name="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="1.116" displayname="TrainServiceMdb1ServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]">
+    <testcase name="testUpdateTrain" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.96" displayname="testUpdateTrain()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testUpdateTrain()]"/>
+    <testcase name="testSaveTrain" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.011" displayname="testSaveTrain()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testSaveTrain()]"/>
+    <testcase name="testViewAllTrains" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.059" displayname="testViewAllTrains()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testViewAllTrains()]"/>
+    <testcase name="testDeleteTrainById" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.027" displayname="testDeleteTrainById()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testDeleteTrainById()]"/>
+    <testcase name="testGetTrainsByName" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.041" displayname="testGetTrainsByName()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testGetTrainsByName()]">
+      <error>org.springframework.dao.DuplicateKeyException: Write operation error on server localhost:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: Train-Microservice.Train index: _id_ dup key: { _id: 0 }', details={}}.; nested exception is com.mongodb.MongoWriteException: Write operation error on server localhost:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: Train-Microservice.Train index: _id_ dup key: { _id: 0 }', details={}}.&#13;
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:106)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:3044)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:600)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.insertDocument(MongoTemplate.java:1546)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.doInsert(MongoTemplate.java:1345)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.insert(MongoTemplate.java:1260)&#13;
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.save(SimpleMongoRepository.java:95)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)&#13;
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)&#13;
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)&#13;
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy92.save(Unknown Source)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy92.save(Unknown Source)&#13;
+	at com.micros.trains.controllertests.TrainServiceMdb1ServiceTests.testGetTrainsByName(TrainServiceMdb1ControllerTests.java:122)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+Caused by: com.mongodb.MongoWriteException: Write operation error on server localhost:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: Train-Microservice.Train index: _id_ dup key: { _id: 0 }', details={}}.&#13;
+	at com.mongodb.client.internal.MongoCollectionImpl.executeSingleWriteRequest(MongoCollectionImpl.java:1018)&#13;
+	at com.mongodb.client.internal.MongoCollectionImpl.executeInsertOne(MongoCollectionImpl.java:471)&#13;
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:454)&#13;
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:448)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$insertDocument$15(MongoTemplate.java:1552)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:598)&#13;
+	... 39 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testGetTrainsByStations" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.01" displayname="testGetTrainsByStations()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testGetTrainsByStations()]">
+      <error>org.springframework.dao.DuplicateKeyException: Write operation error on server localhost:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: Train-Microservice.Train index: _id_ dup key: { _id: 0 }', details={}}.; nested exception is com.mongodb.MongoWriteException: Write operation error on server localhost:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: Train-Microservice.Train index: _id_ dup key: { _id: 0 }', details={}}.&#13;
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:106)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:3044)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:600)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.insertDocument(MongoTemplate.java:1546)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.doInsert(MongoTemplate.java:1345)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.insert(MongoTemplate.java:1260)&#13;
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.save(SimpleMongoRepository.java:95)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)&#13;
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)&#13;
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)&#13;
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy92.save(Unknown Source)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy92.save(Unknown Source)&#13;
+	at com.micros.trains.controllertests.TrainServiceMdb1ServiceTests.testGetTrainsByStations(TrainServiceMdb1ControllerTests.java:135)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+Caused by: com.mongodb.MongoWriteException: Write operation error on server localhost:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: Train-Microservice.Train index: _id_ dup key: { _id: 0 }', details={}}.&#13;
+	at com.mongodb.client.internal.MongoCollectionImpl.executeSingleWriteRequest(MongoCollectionImpl.java:1018)&#13;
+	at com.mongodb.client.internal.MongoCollectionImpl.executeInsertOne(MongoCollectionImpl.java:471)&#13;
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:454)&#13;
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:448)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$insertDocument$15(MongoTemplate.java:1552)&#13;
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:598)&#13;
+	... 39 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

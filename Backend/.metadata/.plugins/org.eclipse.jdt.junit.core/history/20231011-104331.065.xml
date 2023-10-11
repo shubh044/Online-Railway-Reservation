@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="New_configuration" project="Train-service-MDB-1" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="1.152" displayname="TrainServiceMdb1ServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]">
+    <testcase name="testUpdateTrain" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="1.115" displayname="testUpdateTrain()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testUpdateTrain()]"/>
+    <testcase name="testSaveTrain" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.013" displayname="testSaveTrain()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testSaveTrain()]"/>
+    <testcase name="testViewAllTrains" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.02" displayname="testViewAllTrains()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testViewAllTrains()]"/>
+  </testsuite>
+</testrun>

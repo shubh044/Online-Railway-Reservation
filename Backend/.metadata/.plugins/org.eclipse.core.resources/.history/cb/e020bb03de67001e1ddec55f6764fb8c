@@ -1,0 +1,34 @@
+package com.micros.trains.repotests;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.micros.trains.document.Train;
+import com.micros.trains.repo.TrainRepo;
+import com.micros.trains.service.TrainService;
+
+@SpringBootTest
+class TrainServiceMdb1ServiceTests {
+
+	@Autowired
+	private TrainRepo trainRepo;
+	
+	@Test
+    void testFindTrainByName() {
+        List<Train> trains = trainRepo.trainName("Express123");
+        assertTrue(trains.size() > 0);
+    }
+	@Test
+    void testFindTrainsBetweenStations() {
+        List<Train> trains = trainRepo.findtrains("Station1", "Station2");
+        assertEquals(1, trains.size());
+    }
+}
+

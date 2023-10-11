@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TSServiceTests" project="Train-service-MDB-1" tests="4" started="4" failures="1" errors="0" ignored="0">
+  <testsuite name="com.micros.trains.TrainServiceMdb1ServiceTests" time="0.937" displayname="TrainServiceMdb1ServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.TrainServiceMdb1ServiceTests]">
+    <testcase name="checkStations" classname="com.micros.trains.TrainServiceMdb1ServiceTests" time="0.883" displayname="checkStations()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.TrainServiceMdb1ServiceTests]/[method:checkStations()]">
+      <failure>
+        <expected>true</expected>
+        <actual>false</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&#13;
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)&#13;
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)&#13;
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)&#13;
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:179)&#13;
+	at com.micros.trains.TrainServiceMdb1ServiceTests.checkStations(TrainServiceMdb1ServiceTests.java:34)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+    <testcase name="checkNotThere" classname="com.micros.trains.TrainServiceMdb1ServiceTests" time="0.019" displayname="checkNotThere()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.TrainServiceMdb1ServiceTests]/[method:checkNotThere()]"/>
+    <testcase name="contextLoads" classname="com.micros.trains.TrainServiceMdb1ServiceTests" time="0.012" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.TrainServiceMdb1ServiceTests]/[method:contextLoads()]"/>
+    <testcase name="checkbyTrainName" classname="com.micros.trains.TrainServiceMdb1ServiceTests" time="0.018" displayname="checkbyTrainName()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.TrainServiceMdb1ServiceTests]/[method:checkbyTrainName()]"/>
+  </testsuite>
+</testrun>

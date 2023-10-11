@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TrainServiceMdb1ControllerTests" project="Train-service-MDB-1" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="1.016" displayname="TrainServiceMdb1ServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]">
+    <testcase name="testUpdateTrain" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.95" displayname="testUpdateTrain()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testUpdateTrain()]"/>
+    <testcase name="testSaveTrain" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.015" displayname="testSaveTrain()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testSaveTrain()]"/>
+    <testcase name="testViewAllTrains" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.023" displayname="testViewAllTrains()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testViewAllTrains()]"/>
+    <testcase name="testDeleteTrainById" classname="com.micros.trains.controllertests.TrainServiceMdb1ServiceTests" time="0.023" displayname="testDeleteTrainById()" uniqueid="[engine:junit-jupiter]/[class:com.micros.trains.controllertests.TrainServiceMdb1ServiceTests]/[method:testDeleteTrainById()]"/>
+  </testsuite>
+</testrun>

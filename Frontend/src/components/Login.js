@@ -27,6 +27,7 @@ const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
    // handle password eye
  const [passwordEye, setPasswordEye] = useState(false);
@@ -35,7 +36,7 @@ const Login = (props) => {
    setPasswordEye(!passwordEye);}
 
   const { isLoggedIn } = useSelector(state => state.auth);
-  const { message } = useSelector(state => state.message);
+  // const { message } = useSelector(state => state.message);
 
   const dispatch = useDispatch();
 
@@ -49,7 +50,7 @@ const Login = (props) => {
     setPassword(password);
   };
 
-  
+ 
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -64,8 +65,15 @@ const Login = (props) => {
           props.history.push("/Home");
           window.location.reload();
         })
-        .catch(() => {
+        .catch((error) => {
           setLoading(false);
+          if (error) {
+            const errorMessage = "Wrong username or password";
+              setMessage(errorMessage);
+            }
+           else {
+            setMessage("Wrong username or password");
+          }
         });
     } else {
       setLoading(false);
@@ -110,9 +118,9 @@ const Login = (props) => {
 
           <div style={{ textAlign: "left", marginLeft:"20px"}} className="form-group">
             <label style={{fontSize:"20px", fontWeight:"bold",color: "black"}} htmlFor="password">Password</label>
-            
+           
             <Input
-            
+           
                type={passwordEye === false ? "password" : "text"}
               style={{fontSize:"20px", fontWeight:"bold"}}
               className="form-control"
@@ -140,8 +148,8 @@ const Login = (props) => {
               <span>Login</span>
             </button>
           </div>
-          <p class="message">
-            Not registered? <a href="/register">SignUp</a>
+          <p class="message" style={{color: "lightgrey"}}>
+            Not registered? <a style={{color: "white"}} href="/register">SignUp</a>
           </p>
 
           {message && (

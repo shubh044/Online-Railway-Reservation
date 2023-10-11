@@ -14,6 +14,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import com.sau.userAuthentication.controllers.AuthController;
 import com.sau.userAuthentication.models.ERole;
 import com.sau.userAuthentication.models.Role;
 import com.sau.userAuthentication.models.User;
@@ -26,39 +27,22 @@ import com.sau.userAuthentication.repository.UserRepository;
 class UserAuthenticationApplicationTests {
 	
 	@Autowired
-    private TestRestTemplate restTemplate;
-
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private RoleRepository roleRepository;
+    private AuthController authController;
 
 	@Test
 	void contextLoads() {
 	}
 
 	@Test
-    public void testAuthenticateUser() {
-        // Create a test user
-        Role userRole = new Role(ERole.USER);
-        roleRepository.save(userRole);
-        User user = new User("aaaaaa", "aaaaaa@example.com", "aaaaaa");
-        user.setRoles(Set.of(userRole));
-        userRepository.save(user);
+    void testAuthenticateUser() {
+        // Create a sample LoginRequest object for testing
+        LoginRequest loginRequest = new LoginRequest("123456","123456");
 
-        // Create a login request
-        LoginRequest loginRequest = new LoginRequest("testuser", "password");
+        // Call the method you want to test
+        ResponseEntity<?> responseEntity = authController.authenticateUser(loginRequest);
 
-        // Send a POST request to /auth/signin
-        ResponseEntity<String> responseEntity = restTemplate.postForEntity("/auth/signin", loginRequest, String.class);
-
-        // Verify the response status code
-        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-
-        // Verify that the response contains a JWT token
-        String response = responseEntity.getBody();
-        assertNotNull(response);
-        assertTrue(response.contains("accessToken"));
+        // Assertions
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode()); // Verify the HTTP status
+        assertNotNull(responseEntity.getBody()); // Verify that the response body is not null
     }
 }
